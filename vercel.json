@@ -1,5 +1,4 @@
 {
-  "version": 3,
   "builds": [
     {
       "src": "app.js",
@@ -11,9 +10,5 @@
       "src": "/(.*)",
       "dest": "app.js"
     }
-  ],
-  "env": {
-    "MONGO_URI": "your-mongo-uri",
-    "SECRET_KEY": "your-secret"
-  }
+  ]
 }

@@ -25,8 +25,16 @@ app.use(upda);
 app.use(comp);
 app.use(imp);
 
-hamarfun(()=>{
-app.listen(port,()=>{
-  console.log(`this is the  running http://localhost:${port}`);
-})
-})
+// hamarfun(()=>{
+// app.listen(port,()=>{
+//   console.log(`this is the  running http://localhost:${port}`);
+// })
+// })
+
+
+hamarfun(() => {
+  const PORT = process.env.PORT || 6678; 
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+});
