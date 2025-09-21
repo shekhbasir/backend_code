@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+    
+  }
+  header{
+    height: 80px;
+    width: 100vw;
+    background-color: #f2ebeb;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 5px 5px 5px orange;
+    border: 3px solid rgb(203, 247, 247);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(181, 178, 173);
+  }
+
+   #formh input{
+    height: 30px;
+    width: 550px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px rgb(66, 66, 220);
+
+
+  }
+  input:hover{
+    background-color: #e1cece; 
+
+  }
+  
+  button{
+    height: 40px;
+    width: 80px;
+    box-shadow: 5px 5px 5px skyblue;
+  }
+</style>
+<body>
+   <header id="kam">Welcome To Apna ToDO App </header>
+   <main>
+
+
+    <div id="formh">
+      <form action="/upda/<%= item._id %>" method="POST">
+        <input type="text" name="task" value="<%= item.task%>">
+        <button type="submit">ADD TASK</button>
+        
+      </form>
+
+
+
+   
+   </main>
+  
+</body>
+</html>

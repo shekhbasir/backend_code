@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+    
+  }
+  header{
+    height: 80px;
+    width: 100vw;
+    background-color: #f2ebeb;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 5px 5px 5px orange;
+    border: 3px solid rgb(203, 247, 247);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(181, 178, 173);
+  }
+  
+  #formh{
+    font-size: 30px;
+  }
+
+  #lar{
+    margin-top: 100px;
+    height: 30px;
+    width: 700px;
+    background-color: #9de3a3;
+    color: rgb(7, 7, 7);
+    text-transform: capitalize;
+    overflow-x: auto;
+    border: 3px solid rgb(190, 137, 164);
+    border-radius: 15px;
+    box-shadow: 7px 7px 7px rgb(164, 156, 82);
+  }
+  #kam{
+    float: right;
+    height: 50px;
+    
+
+  }
+  #kam2{
+     text-decoration: none;
+    text-transform: capitalize;
+    border: 3px solid black;
+    box-shadow: 5px 5px 5px rgb(164, 241, 164);
+
+  }
+  #op{
+    height: 40px;
+    width: 700px;
+    border: 3px solid rgb(186, 186, 235);
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px darkgray;
+    background-color: #b1e3a7;
+  }
+  .op1{
+    
+    /* background-color: #e6d3d3;
+     */
+     font-size: 15px;
+     margin: 30px;
+     text-decoration: none;
+     box-shadow: 5px 5px 5px rgb(240, 156, 156);
+  }
+
+  .op1:hover{
+    background-color: #97e1a6;
+    
+  }
+ 
+
+ 
+</style>
+<body>
+    <header id="kam">Welcome To Apna ToDO App </header>
+
+     <main>
+    <nav id="bas" style="margin-top: 10px; align-items: center; justify-content: center;display: flex; border: 3px solid orangered; background-color: #f5dddd; border-radius: 10px; height:40px; width: 100px; box-shadow: 4px 4px 4px rgb(240, 227, 107); text-decoration: none; "><button><a href="/dash">DashBoard</a></button> </nav> 
+    <div id="formh">
+      <button id="kam"><a id="kam2" href="/">Add Your Task</a></button>
+      
+       <ul>
+      <% arr.forEach(item =>{ %>
+        <li id="lar"><%= item.task %> </li> 
+
+        <div id="op">
+        <button style="margin-left: 50px;"><a href="/del/<%= item._id%>" class="op1">DELETE</a></button> <button><a href="/upda/<%= item._id%>" class="op1">EDIT TASK</a></button>
+        <button><a href="/comp/<%= item._id%>" id="la" class="op1">Mark as Completed</a></button>
+        <button><a href="/imp/<%= item._id%>" class="op1">Importaint</a></button>
+        <br><br>
+        </div>
+
+    <%  }) %>
+    </ul>
+    </div>
+  </main>
+
+</body>
+</html>
